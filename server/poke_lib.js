@@ -31,7 +31,6 @@ app.post('/', function (req, res) {
 })
 
 app.get('/', function (req, res) {
-    console.log(req.query.ID);
     if (req.query.ID == "all"){
         res.send(cardsData);
     }else {
@@ -39,10 +38,10 @@ app.get('/', function (req, res) {
     }
 })
 
-app.put('/', function (req, res) {
-    if (req.body.ID in cardsData){
-        cardsData[req.body.ID].value = req.body.value;
-        res.send(cardsData[req.body.ID]);
+app.put('/:ID', function (req, res) {
+    if (req.params.ID in cardsData){
+        cardsData[req.params.ID].value = req.body.value;
+        res.send(cardsData[req.params.ID]);
     }else{
         res.send("Not in cards");
     }    

@@ -68,7 +68,7 @@ function get_all() {
 function update_card() {
     let ID = document.getElementById("update_ID").value;
     let value = document.getElementById("update_val").value;
-    axios.put('http://localhost:3000/', {ID, value}).then(response => {
+    axios.put('http://localhost:3000/'+ID, {value}).then(response => {
         if (response.data == 'Not in cards'){
             console.log("Card not found.");
         }else{
