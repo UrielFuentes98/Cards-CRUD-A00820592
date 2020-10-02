@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exam 1. Pokemon cards.</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./utils.js"></script>
+</head>
+<body>
+  <h1>Pokemon information cards.</h1>
+  <div class="entry">
+    name: <input type="text" id="pokemon-name">
+    <button id="add-pokemon" onclick="add_pokemon_to_grid()"> add</button>
+  </div>
+  <div class="entry">
+    New card. ID: <input type="text" id="new_ID"> Type: <input type="text" id="card_type"> Value: <input type="text" id="card_value">
+    <button id="add-card" onclick="add_card()">Add</button>
+  </div>
+  <div class="entry">
+    Get card. ID: <input type="text" id="get_ID"> 
+    <button id="get-card" onclick="get_card()">Get</button>
+  </div>
+  <div class="entry">
+    <button id="get-all" onclick="get_all()">Get All</button>
+  </div>
+  <div class="entry">
+    Update card. ID: <input type="text" id="update_ID"> Value: <input type="text" id="update_val">
+    <button id="update-card" onclick="update_card()">Update</button>
+  </div>
+  <div class="entry">
+    Delete card. ID: <input type="text" id="delete_ID">
+    <button id="delete-card" onclick="delete_card()">Delete</button>
+  </div>
+  <div id="notFound"></div>
+  <div class="grid-container">
+  </div>
+</body>
+</html>
